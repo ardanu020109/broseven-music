@@ -1,50 +1,34 @@
 # PROGRESS - BroSeven! Music
 
 ## Status
-- Fase terakhir: PHASE 9 - Superadmin
-- Fase selesai: PHASE 1, 2, 3, 4, 5, 6, 7, 8 (dikonfirmasi pengguna)
-- Fase berjalan: PHASE 9 (menunggu hasil pengujian)
+- Fase terakhir: PHASE 10 (versi ringkas) - README.md
+- Fase selesai: PHASE 1 sampai 9 (dikonfirmasi pengguna)
+- Fase berjalan: PHASE 10 (menunggu hasil pengujian README)
 
-## Phase 1 (selesai)
-- Laravel 13, Inertia v2, Vue 3, Bootstrap 5 lokal, CSS manual.
+## Phase 1 sampai 9 (selesai)
+- 1: Laravel 13, Inertia v2, Vue 3, Bootstrap 5 lokal, CSS manual.
+- 2: Migration, model, relasi, SuperAdminSeeder, bs7:db-check.
+- 3: Login/logout, role middleware, policy, status akun, halaman error, bs7:auth-check.
+- 4: CRUD artis dan album, upload foto/cover (storage privat), bs7:media-check.
+- 5: CRUD lagu, upload audio privat, streaming Range, download, SingleSelect, bs7:song-check.
+- 6: Playlist, favorite, Favorites, bs7:playlist-check. Mini player dan scrollbar modern.
+- 7: Player global (Pinia), vinyl, shuffle, repeat 3 mode, queue, persistent antarhalaman.
+- 8: Beranda listener, pencarian, detail album/artis, antrean seluruh koleksi, Recently Played, bs7:home-check.
+- 9: Dashboard superadmin, Manage Listeners, Uploaded Music, Profile, bs7:admin-check.
 
-## Phase 2 (selesai)
-- Migration, model, relasi, SuperAdminSeeder, bs7:db-check.
-
-## Phase 3 (selesai)
-- Login/logout, role middleware, policy, status akun, halaman error, bs7:auth-check.
-
-## Phase 4 (selesai)
-- CRUD artis dan album, upload foto/cover (storage privat), sidebar, bs7:media-check.
-
-## Phase 5 (selesai)
-- CRUD lagu, upload audio privat, streaming Range, download, SingleSelect, bs7:song-check.
-
-## Phase 6 (selesai)
-- Playlist, favorite, halaman Favorites, bs7:playlist-check. Mini player dan scrollbar modern.
-
-## Phase 7 (selesai)
-- Player global (Pinia), vinyl, shuffle, repeat 3 mode, queue, volume, seek, persistent antarhalaman.
-
-## Phase 8 (selesai)
-- Beranda listener, pencarian, detail album/artis, antrean seluruh koleksi, Recently Played, bs7:home-check.
-
-## Phase 9
-- Dashboard superadmin (statistik, listener terbaru, upload terbaru).
-- Manage Listeners: daftar (search, filter status, pagination), tambah, ubah, detail, aktif/nonaktif
-  (memutus sesi), hapus (beserta data dan file fisik).
-- Uploaded Music: daftar semua lagu (search, filter pemilik), putar (antrean maks. 500), unduh, detail.
-  Tanpa edit/hapus.
-- Profile untuk superadmin dan listener (nama, email listener, ganti password).
-- Layout admin dengan sidebar. SuperAdminSeeder tidak menimpa nama/password akun yang sudah ada.
-- File dibuat: ListenerService, AdminService, Store/UpdateListenerRequest, UpdateProfileRequest,
-  UpdatePasswordRequest, Admin/ListenerController, Admin/UploadedMusicController, Admin/MusicQueueController,
-  ProfileController, AdminCheckCommand, DevListenersCommand, AdminSidebar, AdminSongList, ListenerForm,
-  ProfileForm, halaman Admin (Dashboard, Listeners/*, Songs/*, Profile), Listener/Profile
-- File diperbarui: SuperAdminSeeder, DashboardController, AdminLayout, routes/web.php, useFormat.js,
-  Sidebar.vue, components.css
+## Phase 10 (versi ringkas)
+- KEPUTUSAN PENGGUNA: LyricsService, input lirik manual, panel lirik, dan integrasi API lirik DILEWATI.
+  Kolom songs.lyrics tetap ada di database tetapi tidak dipakai.
+- Final security review: BELUM dikerjakan (menunggu keputusan pengguna).
+- README.md: dibuat sesuai implementasi aktual (fitur, instalasi, konfigurasi, database, seeder, penyimpanan,
+  hak akses, pemutar, endpoint, keamanan, pengujian, struktur, keterbatasan, pemecahan masalah).
+- File dibuat/diperbarui: README.md, PROGRESS.md
 - Hasil pengujian: BELUM DIUJI
-- Error dan solusi: -
+
+## Belum dikerjakan
+- Tes otomatis PHPUnit (tes contoh bawaan Laravel belum disesuaikan; "/" mengalihkan ke login)
+- DEPLOYMENT.md, CHANGELOG.md, LICENSE, finalisasi .env.example dan .gitignore
+- Production build, persiapan GitHub, final review
 
 ## Langkah berikutnya
-- Menunggu STATUS: BERHASIL untuk Phase 9, lalu lanjut Phase 10 (Lirik dan Final Security).
+- Menunggu STATUS: BERHASIL untuk README, lalu lanjut sesuai keputusan pengguna.
