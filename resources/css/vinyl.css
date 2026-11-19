@@ -1,0 +1,66 @@
+.vinyl {
+    position: relative;
+    width: min(100%, 360px);
+    aspect-ratio: 1 / 1;
+    margin-inline: auto;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, var(--bs7-dark-soft) 0 30%, #0B1120 31% 100%);
+    box-shadow: 0 25px 60px rgba(124, 58, 237, 0.35), inset 0 0 0 6px #111827;
+    animation: bs7-spin 4s linear infinite;
+    animation-play-state: paused;
+}
+
+.vinyl.is-spinning {
+    animation-play-state: running;
+}
+
+.vinyl::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: repeating-radial-gradient(circle at center, transparent 0 6px, rgba(255, 255, 255, 0.05) 7px 8px);
+}
+
+.vinyl::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, transparent 0 20%, rgba(255, 255, 255, 0.14) 25%, transparent 30% 70%, rgba(255, 255, 255, 0.14) 75%, transparent 80%);
+}
+
+.vinyl-label {
+    position: absolute;
+    inset: 33%;
+    z-index: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bs7-gradient);
+    border: 4px solid var(--bs7-cyan);
+    color: var(--bs7-light);
+    font-weight: 800;
+    letter-spacing: 0.05em;
+}
+
+.vinyl-label::after {
+    content: "";
+    position: absolute;
+    width: 12%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: var(--bs7-dark);
+}
+
+.vinyl-label span {
+    position: relative;
+    top: -30%;
+    font-size: 0.8rem;
+}
+
+@keyframes bs7-spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}

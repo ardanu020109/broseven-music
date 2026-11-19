@@ -1,0 +1,24 @@
+:root {
+    --bs7-dark: #0F172A;
+    --bs7-purple: #7C3AED;
+    --bs7-cyan: #22D3EE;
+    --bs7-pink: #F472B6;
+    --bs7-light: #F8FAFC;
+
+    --bs7-purple-dark: #6D28D9;
+    --bs7-dark-soft: #1E293B;
+    --bs7-gradient: linear-gradient(135deg, var(--bs7-purple) 0%, var(--bs7-pink) 100%);
+    --bs7-radius: 1rem;
+    --bs7-radius-lg: 1.5rem;
+    --bs7-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+    --bs7-font: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+
+    /* Penyesuaian variabel Bootstrap */
+    --bs-body-font-family: var(--bs7-font);
+    --bs-body-bg: var(--bs7-light);
+    --bs-body-color: var(--bs7-dark);
+    --bs-primary: var(--bs7-purple);
+    --bs-primary-rgb: 124, 58, 237;
+    --bs-link-color: var(--bs7-purple);
+    --bs-link-hover-color: var(--bs7-purple-dark);
+}

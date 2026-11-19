@@ -1,0 +1,126 @@
+:root {
+    --bs7-sidebar-width: 260px;
+}
+
+.bs7-app {
+    display: flex;
+    min-height: 100vh;
+    background: var(--bs7-light);
+}
+
+.bs7-sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: var(--bs7-sidebar-width);
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 1rem;
+    background: var(--bs7-dark);
+    color: var(--bs7-light);
+    z-index: 1040;
+    overflow-y: auto;
+    transition: transform 0.25s ease;
+}
+
+.bs7-sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.05rem;
+}
+
+.bs7-nav {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.bs7-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.7rem 0.9rem;
+    border-radius: 0.75rem;
+    color: rgba(248, 250, 252, 0.75);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.bs7-nav-item i {
+    font-size: 1.1rem;
+}
+
+.bs7-nav-item:hover {
+    background: rgba(248, 250, 252, 0.08);
+    color: var(--bs7-light);
+}
+
+.bs7-nav-item.is-active {
+    background: var(--bs7-purple);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
+}
+
+.bs7-nav-item.is-disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.bs7-nav-item.is-disabled:hover {
+    background: transparent;
+    color: rgba(248, 250, 252, 0.75);
+}
+
+.bs7-nav-soon {
+    margin-left: auto;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--bs7-cyan);
+    border: 1px solid rgba(34, 211, 238, 0.5);
+    border-radius: 999px;
+    padding: 0.05rem 0.45rem;
+}
+
+.bs7-sidebar-user {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(248, 250, 252, 0.1);
+}
+
+.bs7-main {
+    flex: 1;
+    min-width: 0;
+    margin-left: var(--bs7-sidebar-width);
+    display: flex;
+    flex-direction: column;
+}
+
+.bs7-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.bs7-mobilebar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--bs7-dark);
+    color: var(--bs7-light);
+}
+
+.bs7-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    z-index: 1035;
+}

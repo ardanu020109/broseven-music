@@ -1,0 +1,36 @@
+@media (max-width: 991.98px) {
+    .bs7-hero {
+        padding-block: 2rem;
+        text-align: center;
+    }
+
+    .bs7-status {
+        display: inline-block;
+        text-align: left;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .bs7-hero .display-4 {
+        font-size: 2.25rem;
+    }
+}
+
+/* ===== Phase 4: sidebar responsif ===== */
+@media (max-width: 991.98px) {
+    .bs7-sidebar {
+        transform: translateX(-100%);
+    }
+
+    .bs7-sidebar.is-open {
+        transform: translateX(0);
+    }
+
+    .bs7-main {
+        margin-left: 0;
+    }
+
+    .bs7-content {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,86 @@
+html, body {
+    min-height: 100%;
+}
+
+body {
+    background-color: var(--bs7-light);
+    color: var(--bs7-dark);
+    font-family: var(--bs7-font);
+    -webkit-font-smoothing: antialiased;
+}
+
+.bs7-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: var(--bs7-light);
+    background:
+        radial-gradient(900px 500px at 85% 10%, rgba(124, 58, 237, 0.35), transparent 60%),
+        radial-gradient(700px 400px at 5% 95%, rgba(34, 211, 238, 0.18), transparent 60%),
+        var(--bs7-dark);
+}
+
+/* ===== Phase 6b: scrollbar modern ===== */
+:root {
+    --bs7-scroll-thumb: rgba(124, 58, 237, 0.45);
+    --bs7-scroll-thumb-hover: rgba(124, 58, 237, 0.85);
+}
+
+/* Firefox (tanpa dukungan ::-webkit-scrollbar) */
+@supports not selector(::-webkit-scrollbar) {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--bs7-scroll-thumb) transparent;
+    }
+
+    .bs7-sidebar {
+        scrollbar-color: rgba(248, 250, 252, 0.28) transparent;
+    }
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bs7-scroll-thumb);
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--bs7-scroll-thumb-hover);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--bs7-purple);
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* Sidebar gelap */
+.bs7-sidebar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.bs7-sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(248, 250, 252, 0.22);
+}
+
+.bs7-sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--bs7-cyan);
+}
+
+/* Daftar dropdown (SingleSelect) */
+.bs7-select-list::-webkit-scrollbar {
+    width: 10px;
+}
